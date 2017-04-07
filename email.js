@@ -1,33 +1,39 @@
+var config = require("./settings.json");
 var nodemailer = require('nodemailer');
 
-var Email = function() {};
+module.exports = {
 
-Email.prototype.enviar = function (mensagem) {
+    enviar: function (mensagem) {
 
-    var transporter = nodemailer.createTransport({
-        service: "hotmail",
-        auth: {
-            user: 'user@live.com',
-            pass: 'pass'
-        }
-    });
+        return new Promise(function (resolve, reject) {
 
-    let mailOptions = {
-        from: '"NodeJs Crawler" <user@live.com>',
-        to: 'user@gmail.com',
-        subject: 'NodeJs Crawler ✔',        
-        html: mensagem
-    };
+            let transporter = nodemailer.createTransport({
+                service: "hotmail",
+                auth: {
+                    user: config.user,
+                    pass: config.pass
+                }
+            });
 
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Mensagem %s enviada: %s', info.messageId, info.response);
-    });
+            let mailOptions = {
+                from: '"NodeJs Crawler" <' + config.to + '>',
+                to: config.to,
+                subject: 'NodeJs Crawler ✔',
+                html: mensagem
+            };
 
-    transporter.close();
-}
+            // send mail with defined transport object
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    reject();
+                    return console.log(error);
+                }
+                console.log('Mensagem %s enviada: %s', info.messageId, info.response);
+                resolve();
+            });
 
-module.exports = new Email();
+            transporter.close();
+
+        });
+    }
+};
