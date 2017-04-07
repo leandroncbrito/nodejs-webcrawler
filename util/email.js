@@ -1,4 +1,4 @@
-var config = require("./settings.json");
+var config = require("../settings.json");
 var nodemailer = require('nodemailer');
 
 module.exports = {

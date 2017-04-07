@@ -1,4 +1,4 @@
-var Produto = require('./produto.js');
+var Produto = require('../model/produto.js');
 
 var B2W = function () { };
 
