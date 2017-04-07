@@ -12,4 +12,4 @@ function iniciar(enviaremail) {
     }, interval);
 }
 
-iniciar(false);
+iniciar(true);

@@ -1,8 +1,13 @@
-var Produto = function (nome, preco, boleto, cartaoLoja) {
+var Produto = function (nome, valores) {
     this.nome = nome;
-    this.preco = preco;
-    this.boleto = boleto;
-    this.cartaoLoja = cartaoLoja;
+    this.valores = {
+        preco: valores.preco,
+        precoDescricao: valores.precoDescricao,
+        boleto: valores.boleto,
+        boletoDescricao: valores.boletoDescricao,
+        cartaoLoja: valores.cartaoLoja,
+        cartaoLojaDescricao: valores.cartaoLojaDescricao
+    };    
 };
 
 module.exports = Produto;
