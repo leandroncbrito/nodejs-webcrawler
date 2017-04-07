@@ -55,15 +55,17 @@ module.exports = {
                 if (baixou > 0) {
 
                     mensagem += '<br><br><strong><a href="' + pagina + '">LINK PARA O PRODUTO</a></strong>';
-                    console.log(mensagem);
+                    console.log('Baixou o preço!');
 
                     if (enviaremail) {                        
                         email.enviar(mensagem).then(function () {                            
                             process.exit(1);
                         });
                     }
-
                 }
+
+                console.log('\n');
+                
             }
         });
     }
