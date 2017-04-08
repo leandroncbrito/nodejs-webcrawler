@@ -1,7 +1,5 @@
 // Rename to setting.json
 {
-    "user": "usuario@email.com",
-    "pass": "senha",
     "to": "para@email.com",
     "minutes": 1,
     "price": 20000,

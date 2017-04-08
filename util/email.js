@@ -10,8 +10,8 @@ module.exports = {
             let transporter = nodemailer.createTransport({
                 service: "hotmail",
                 auth: {
-                    user: config.user,
-                    pass: config.pass
+                    user: process.env.USERMAIL,
+                    pass: process.env.PASSMAIL
                 }
             });
 

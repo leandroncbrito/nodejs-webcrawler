@@ -1,5 +1,8 @@
+var dotenv = require('dotenv');
 var crawler = require('./core/crawler.js');
 var config = require('./settings.json');
+
+dotenv.load();
 
 var interval = config.minutes * 10000;
 
