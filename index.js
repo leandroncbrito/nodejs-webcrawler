@@ -4,9 +4,6 @@ var config = require('./settings.json');
 
 dotenv.load();
 
-console.log(process.env);
-process.exit(1);
-
 var interval = config.minutes * 10000;
 
 function iniciar(enviaremail) {
