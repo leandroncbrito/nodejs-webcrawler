@@ -3,16 +3,18 @@
 var config = require("../settings.json");
 var nodemailer = require('nodemailer');
 
-function gerarTituloDaMensagem(nomeDoProduto, mensagem) {
-    mensagem += '<strong>' + nomeDoProduto + '</strong><br>';
+var msg = '';
+
+function gerarTituloDaMensagem(nomeDoProduto) {
+    msg += '<strong>' + nomeDoProduto + '</strong><br>';
 };
 
-function gerarCorpoDaMensagem(descricaoProduto, mensagem) {
-    mensagem += "<br>" + descricaoProduto;
+function gerarCorpoDaMensagem(descricaoProduto) {
+    msg += "<br>" + descricaoProduto;
 };
 
-function gerarLinkDaMensagem(linkDoProduto, mensagem) {
-    mensagem += '<br><br><strong><a href="' + linkDoProduto + '" alt="' + linkDoProduto + '">LINK PARA O PRODUTO</a></strong>';
+function gerarLinkDaMensagem(linkDoProduto) {
+    msg += '<br><br><strong><a href="' + linkDoProduto + '" alt="' + linkDoProduto + '">LINK PARA O PRODUTO</a></strong>';
 };
 
 module.exports = {
@@ -53,25 +55,25 @@ module.exports = {
 
     gerarEmail: function (produto, quedaDePreco) {
 
-        let mensagem = '';
+        msg = '';
 
-        gerarTituloDaMensagem(produto.nome, mensagem);
+        gerarTituloDaMensagem(produto.nome);
 
         if (quedaDePreco.precoMenor) {
-            gerarCorpoDaMensagem(produto.valores.precoDescricao, mensagem);
+            gerarCorpoDaMensagem(produto.valores.precoDescricao);
         }
 
         if (quedaDePreco.boletoMenor) {
-            gerarCorpoDaMensagem(produto.valores.boletoDescricao, mensagem);
+            gerarCorpoDaMensagem(produto.valores.boletoDescricao);
         }
 
         if (quedaDePreco.cartaoLojaMenor) {
-            gerarCorpoDaMensagem(produto.valores.cartaoLojaDescricao, mensagem);
+            gerarCorpoDaMensagem(produto.valores.cartaoLojaDescricao);
         }
 
-        gerarLinkDaMensagem(produto.link, mensagem);
+        gerarLinkDaMensagem(produto.link);
 
-        return mensagem;
+        return msg;
 
     }
 
