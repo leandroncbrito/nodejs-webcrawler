@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     converterParaDecimal: function(valor) {
         if (!valor) {

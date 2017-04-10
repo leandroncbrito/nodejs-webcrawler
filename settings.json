@@ -1,6 +1,9 @@
 {
     "to": "leandroncbrito@gmail.com",
     "minutes": 10,
-    "price": 20000,
-    "page": "https://www.submarino.com.br/produto/130836199/game-horizon-zero-dawn-ps4"
+    "price": 16040,
+    "pages": [
+        "https://www.submarino.com.br/produto/130836199/game-horizon-zero-dawn-ps4",
+        "http://www.americanas.com.br/produto/130836199/game-horizon-zero-dawn-ps4"
+    ]
 }

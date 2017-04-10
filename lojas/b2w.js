@@ -1,3 +1,5 @@
+'use strict';
+
 var common = require('../util/common.js');
 var Produto = require('../model/produto.js');
 
@@ -7,7 +9,7 @@ B2W.prototype = {
 
     buscarDados: function ($) {
 
-        let nome = $('html > body .product-name');
+        let nome = $('html > body .product-name').text();
         let preco = $('html > body .main-price > .sales-price').text();
         let boleto = $('html > body .payment-option-price').eq(0);
         let cartaoLoja = $('html > body .payment-option-price').eq(1);
@@ -19,6 +21,7 @@ B2W.prototype = {
         let valorBoleto = common.converterParaDecimal(boleto.text());
         let valorCartaoLoja = common.converterParaDecimal(cartaoLoja.text());
 
+        console.log(nome);
         console.log(preco);
         console.log(boletoDescricao);
         console.log(cartaoLojaDescricao);

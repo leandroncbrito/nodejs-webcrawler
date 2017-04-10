@@ -1,3 +1,5 @@
+'use strict';
+
 var Lojas = function() {
     this.empresa = {};
 };
