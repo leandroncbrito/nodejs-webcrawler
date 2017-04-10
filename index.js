@@ -6,7 +6,7 @@ var config = require('./settings.json');
 
 dotenv.load();
 
-var interval = config.minutes * 10000;
+var interval = config.minutes * 60 * 1000;
 
 function iniciar(enviaremail) {
 
