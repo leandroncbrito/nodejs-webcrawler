@@ -13,7 +13,7 @@ const precobase = config.price;
 
 var interval = config.minutes * 60 * 1000;
 
-function ProcessarProdutoGerarMensagem(produto, enviaremail) {
+function ProcessarProdutoEnviarEmail(produto, enviaremail) {
     
     let quedaDePreco = new QuedaDePreco();
 
@@ -35,13 +35,11 @@ function ProcessarProdutoGerarMensagem(produto, enviaremail) {
 
         }
     }
-
 }
 
 function VerificarPreco(precoDoSite, descricao) {
     return (precoDoSite > 0 && precoDoSite < precobase);
 }
-
 
 module.exports = {
 
@@ -67,8 +65,8 @@ module.exports = {
 
                     produto.link = pagina;
 
-                    ProcessarProdutoGerarMensagem(produto, enviaremail);
-
+                    ProcessarProdutoEnviarEmail(produto, enviaremail);
+                    
                 }
             });
         }
