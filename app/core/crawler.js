@@ -4,8 +4,8 @@ const request = require('request');
 const cheerio = require('cheerio');
 const B2W = require('../lojas/b2w.js');
 const QuedaDePreco = require('../model/quedaDePreco.js');
-const Email = require('../util/email.js');
-const config = require('../settings.json');
+const Email = require('../../util/email.js');
+const config = require('../../config/settings.json');
 
 const paginas = config.pages;
 const precobase = config.price;

@@ -1,6 +1,6 @@
 'use strict';
 
-const config = require("../settings.json");
+const config = require("../config/settings.json");
 const nodemailer = require('nodemailer');
 
 let msg = '';

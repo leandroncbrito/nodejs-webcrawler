@@ -1,6 +1,6 @@
 'use strict';
 
-const common = require('../util/common.js');
+const common = require('../../util/common.js');
 const Lojas = require('./lojas.js');
 const Produto = require('../model/produto.js');
 

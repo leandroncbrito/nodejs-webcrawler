@@ -1,8 +1,8 @@
 'use strict';
 
 const dotenv = require('dotenv');
-const crawler = require('./core/crawler.js');
-const config = require('./settings.json');
+const crawler = require('./app/core/crawler.js');
+const config = require('./config/settings.json');
 
 dotenv.load();
 
