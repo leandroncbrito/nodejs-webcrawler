@@ -10,8 +10,6 @@ const config = require('../settings.json');
 const paginas = config.pages;
 const precobase = config.price;
 
-let interval = config.minutes * 60 * 1000;
-
 const ProcessarProdutoEnviarEmail = (produto, enviaremail) => {
     
     let quedaDePreco = new QuedaDePreco();
