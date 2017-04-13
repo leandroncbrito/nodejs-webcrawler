@@ -1,13 +1,12 @@
 'use strict';
 
-var common = require('../util/common.js');
-var Produto = require('../model/produto.js');
+const common = require('../util/common.js');
+const Lojas = require('./lojas.js');
+const Produto = require('../model/produto.js');
 
-var B2W = function () { };
-
-B2W.prototype = {
-
-    buscarDados: function ($) {
+class B2W extends Lojas {
+    
+    buscarDados($) {
 
         let nome = $('html > body .product-name').text();
         let preco = $('html > body .main-price > .sales-price').text();
@@ -26,7 +25,7 @@ B2W.prototype = {
         console.log(boletoDescricao);
         console.log(cartaoLojaDescricao);
 
-        var valores = {
+        let valores = {
             preco: valorPreco,
             precoDescricao: preco,
             boleto: valorBoleto,
@@ -37,8 +36,7 @@ B2W.prototype = {
 
         return new Produto(nome, valores);
 
-    },
-
-};
+    }
+}
 
 module.exports = B2W;

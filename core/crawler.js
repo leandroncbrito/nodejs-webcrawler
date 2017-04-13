@@ -1,19 +1,18 @@
 'use strict';
 
-var request = require('request');
-var cheerio = require('cheerio');
-var Lojas = require('../lojas/lojas.js');
-var B2W = require('../lojas/b2w.js');
-var QuedaDePreco = require('../model/quedaDePreco.js');
-var Email = require('../util/email.js');
-var config = require('../settings.json');
+const request = require('request');
+const cheerio = require('cheerio');
+const B2W = require('../lojas/b2w.js');
+const QuedaDePreco = require('../model/quedaDePreco.js');
+const Email = require('../util/email.js');
+const config = require('../settings.json');
 
 const paginas = config.pages;
 const precobase = config.price;
 
-var interval = config.minutes * 60 * 1000;
+let interval = config.minutes * 60 * 1000;
 
-function ProcessarProdutoEnviarEmail(produto, enviaremail) {
+const ProcessarProdutoEnviarEmail = (produto, enviaremail) => {
     
     let quedaDePreco = new QuedaDePreco();
 
@@ -29,6 +28,7 @@ function ProcessarProdutoEnviarEmail(produto, enviaremail) {
 
             let mensagem = Email.gerarEmail(produto, quedaDePreco);
 
+            //console.log(mensagem);
             Email.enviar(mensagem).then(function () {
                 process.exit(1);
             });
@@ -37,15 +37,15 @@ function ProcessarProdutoEnviarEmail(produto, enviaremail) {
     }
 }
 
-function VerificarPreco(precoDoSite, descricao) {
+const VerificarPreco = (precoDoSite, descricao) => {
     return (precoDoSite > 0 && precoDoSite < precobase);
 }
 
 module.exports = {
 
-    buscarDados: function (enviaremail) {
+    buscarDados: (enviaremail) => {
 
-        for (var index = 0; index < paginas.length; index++) {
+        for (let index = 0; index < paginas.length; index++) {
 
             let pagina = paginas[index];
 
@@ -58,10 +58,10 @@ module.exports = {
                 if (response.statusCode === 200) {
 
                     // Parse the document body
-                    var $ = cheerio.load(body);
+                    let $ = cheerio.load(body);
 
-                    let lojas = new Lojas();
-                    let produto = lojas.buscarDados(new B2W(), $);
+                    let b2w = new B2W();
+                    let produto = b2w.buscarDados($);
 
                     produto.link = pagina;
 

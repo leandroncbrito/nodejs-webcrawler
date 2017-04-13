@@ -1,16 +1,26 @@
 'use strict';
 
-var Produto = function (nome, valores) {
-    this.nome = nome;
-    this.link = '';
-    this.valores = {
-        preco: valores.preco,
-        precoDescricao: valores.precoDescricao,
-        boleto: valores.boleto,
-        boletoDescricao: valores.boletoDescricao,
-        cartaoLoja: valores.cartaoLoja,
-        cartaoLojaDescricao: valores.cartaoLojaDescricao
-    };
-};
+class Produto {
+    constructor(nome, valores) {
+        this.nome = nome;
+        this._link = '';
+        this.valores = {
+            preco: valores.preco,
+            precoDescricao: valores.precoDescricao,
+            boleto: valores.boleto,
+            boletoDescricao: valores.boletoDescricao,
+            cartaoLoja: valores.cartaoLoja,
+            cartaoLojaDescricao: valores.cartaoLojaDescricao
+        };
+    }
+
+    get link() {
+        return this._link;
+    }
+
+    set link(link) {
+        this._link = link;
+    }
+}
 
 module.exports = Produto;

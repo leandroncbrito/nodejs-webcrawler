@@ -1,27 +1,24 @@
 'use strict';
 
-var config = require("../settings.json");
-var nodemailer = require('nodemailer');
+const config = require("../settings.json");
+const nodemailer = require('nodemailer');
 
-var msg = '';
+let msg = '';
 
-function gerarTituloDaMensagem(nomeDoProduto) {
-    msg += '<strong>' + nomeDoProduto + '</strong><br>';
-};
+const gerarTituloDaMensagem = (nomeDoProduto) =>    
+    msg += `<strong>${nomeDoProduto} </strong><br>`;
 
-function gerarCorpoDaMensagem(descricaoProduto) {
-    msg += "<br>" + descricaoProduto;
-};
+const gerarCorpoDaMensagem = (descricaoProduto) =>
+    msg += `<br>${descricaoProduto}`;
 
-function gerarLinkDaMensagem(linkDoProduto) {
-    msg += '<br><br><strong><a href="' + linkDoProduto + '" alt="' + linkDoProduto + '">LINK PARA O PRODUTO</a></strong>';
-};
+const gerarLinkDaMensagem = (linkDoProduto) =>
+    msg += `<br><br><strong><a href="${linkDoProduto}" alt="${linkDoProduto}">LINK PARA O PRODUTO</a></strong>`
 
 module.exports = {
 
-    enviar: function (mensagem) {
+    enviar: (mensagem) => {
 
-        return new Promise(function (resolve, reject) {
+        return new Promise((resolve, reject) => {
 
             let transporter = nodemailer.createTransport({
                 service: "hotmail",
@@ -53,7 +50,7 @@ module.exports = {
         });
     },
 
-    gerarEmail: function (produto, quedaDePreco) {
+    gerarEmail: (produto, quedaDePreco) => {
 
         msg = '';
 

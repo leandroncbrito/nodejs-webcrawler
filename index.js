@@ -1,12 +1,12 @@
 'use strict';
 
-var dotenv = require('dotenv');
-var crawler = require('./core/crawler.js');
-var config = require('./settings.json');
+const dotenv = require('dotenv');
+const crawler = require('./core/crawler.js');
+const config = require('./settings.json');
 
 dotenv.load();
 
-var interval = config.minutes * 60 * 1000;
+let interval = config.minutes * 60 * 1000;
 
 function iniciar(enviaremail) {
 
@@ -15,6 +15,7 @@ function iniciar(enviaremail) {
     setInterval(function () {
          crawler.buscarDados(enviaremail)
     }, interval);
+    
 }
 
 iniciar(true);

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    converterParaDecimal: function(valor) {
+    converterParaDecimal: (valor) => {
         if (!valor) {
             return 0;
         }
