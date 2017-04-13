@@ -6,7 +6,7 @@ const config = require('./settings.json');
 
 dotenv.load();
 
-let interval = config.minutes * 60 * 1000;
+let intervalo = config.minutes * 60 * 1000;
 
 function iniciar(enviaremail) {
 
@@ -14,7 +14,7 @@ function iniciar(enviaremail) {
     
     setInterval(function () {
          crawler.buscarDados(enviaremail)
-    }, interval);
+    }, intervalo);
     
 }
 
