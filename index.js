@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
 
 function iniciar(enviaremail) {
 
-    crawler.buscarDados(enviaremail);
+    //crawler.buscarDados(enviaremail);
     
     setInterval(function () {
          crawler.buscarDados(enviaremail)
