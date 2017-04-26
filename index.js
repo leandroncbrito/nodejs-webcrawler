@@ -7,7 +7,7 @@ const config = require('./config/settings.json');
 
 dotenv.load();
 
-//let intervalo = config.minutes * 60 * 1000;
+let intervalo = config.minutes * 60 * 1000;
 
 http.createServer(function (req, res) {
   
