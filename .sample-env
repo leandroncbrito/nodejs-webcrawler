@@ -1,2 +1,3 @@
 USERMAIL=user@mail.com
 PASSMAIL=password
+HOST=http://localhost:8080

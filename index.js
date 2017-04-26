@@ -7,7 +7,7 @@ const config = require('./config/settings.json');
 
 dotenv.load();
 
-let intervalo = config.minutes * 60 * 1000;
+//let intervalo = config.minutes * 60 * 1000;
 
 http.createServer(function (req, res) {
   
@@ -18,7 +18,13 @@ http.createServer(function (req, res) {
 
 function iniciar(enviaremail) {
 
-    //crawler.buscarDados(enviaremail);
+    console.log("Iniciando crawler...");
+
+    setInterval(function () {        
+        http.get(process.env.HOST, function() { 
+          console.log("Ping");
+        });
+    }, intervalo / 2);
     
     setInterval(function () {
          crawler.buscarDados(enviaremail)
