@@ -8,6 +8,7 @@ const config = require('./config/settings.json');
 dotenv.load();
 
 let intervalo = config.minutes * 60 * 1000;
+let ping = 5 * 60 * 1000;
 
 http.createServer(function (req, res) {
   
@@ -24,7 +25,7 @@ function iniciar(enviaremail) {
         http.get(process.env.HOST, function() { 
           console.log("Ping");
         });
-    }, intervalo / 2);
+    }, ping);
     
     setInterval(function () {
          crawler.buscarDados(enviaremail)
