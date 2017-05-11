@@ -2,25 +2,25 @@
 
 const request = require('request');
 const cheerio = require('cheerio');
-const B2W = require('../lojas/b2w.js');
+const GoogleShopping = require('../lojas/googleShopping.js');
 const QuedaDePreco = require('../model/quedaDePreco.js');
 const Email = require('../../util/email.js');
 const config = require('../../config/settings.json');
+const common = require('../../util/common.js');
 
-const paginas = config.pages;
+
+const pagina = config.page;
 const precobase = config.price;
 
 const ProcessarProdutoEnviarEmail = (produto, enviaremail) => {
-    
+
     let quedaDePreco = new QuedaDePreco();
 
-    quedaDePreco.precoMenor = VerificarPreco(produto.valores.preco);
-    quedaDePreco.boletoMenor = VerificarPreco(produto.valores.boleto);
-    quedaDePreco.cartaoLojaMenor = VerificarPreco(produto.valores.cartaoLoja);
+    quedaDePreco.precoMenor = VerificarPreco(common.converterParaDecimal(produto.preco));
 
-    if (quedaDePreco.precoMenor || quedaDePreco.boletoMenor || quedaDePreco.cartaoLojaMenor) {
+    if (quedaDePreco.precoMenor) {
 
-        console.log('Baixou o preço!\n-----------------------------------------------------------------\n');
+        console.log('\nBaixou o preço!\n-----------------------------------------------------------------\n');
 
         if (enviaremail) {
 
@@ -35,7 +35,7 @@ const ProcessarProdutoEnviarEmail = (produto, enviaremail) => {
     }
 }
 
-const VerificarPreco = (precoDoSite, descricao) => {
+const VerificarPreco = (precoDoSite) => {    
     return (precoDoSite > 0 && precoDoSite < precobase);
 }
 
@@ -43,30 +43,24 @@ module.exports = {
 
     buscarDados: (enviaremail) => {
 
-        for (let index = 0; index < paginas.length; index++) {
+        request(pagina, function (error, response, body) {
 
-            let pagina = paginas[index];
+            if (error) {
+                console.log("Erro: " + error);
+            }
 
-            request(pagina, function (error, response, body) {
+            if (response.statusCode === 200) {
 
-                if (error) {
-                    console.log("Erro: " + error);
+                // Parse the document body
+                let $ = cheerio.load(body);
+
+                let googleShop = new GoogleShopping();
+                let produtos = googleShop.buscarDados($);
+
+                for (let index = 0; index < produtos.length; index++) {
+                    ProcessarProdutoEnviarEmail(produtos[index], enviaremail);
                 }
-
-                if (response.statusCode === 200) {
-
-                    // Parse the document body
-                    let $ = cheerio.load(body);
-
-                    let b2w = new B2W();
-                    let produto = b2w.buscarDados($);
-
-                    produto.link = pagina;
-
-                    ProcessarProdutoEnviarEmail(produto, enviaremail);
-                    
-                }
-            });
-        }
+            }
+        });
     }
 }

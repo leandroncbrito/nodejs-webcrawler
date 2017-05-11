@@ -1,25 +1,11 @@
 'use strict';
 
 class Produto {
-    constructor(nome, valores) {
+    constructor(nome, nomeLoja, preco, link) {
         this.nome = nome;
-        this._link = '';
-        this.valores = {
-            preco: valores.preco,
-            precoDescricao: valores.precoDescricao,
-            boleto: valores.boleto,
-            boletoDescricao: valores.boletoDescricao,
-            cartaoLoja: valores.cartaoLoja,
-            cartaoLojaDescricao: valores.cartaoLojaDescricao
-        };
-    }
-
-    get link() {
-        return this._link;
-    }
-
-    set link(link) {
-        this._link = link;
+        this.nomeLoja = nomeLoja;        
+        this.preco= preco;            
+        this.link = link;
     }
 }
 

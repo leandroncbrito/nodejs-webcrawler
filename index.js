@@ -27,6 +27,8 @@ function iniciar(enviaremail) {
         });
     }, ping);
     
+crawler.buscarDados(enviaremail);
+
     setInterval(function () {
          crawler.buscarDados(enviaremail)
     }, intervalo);

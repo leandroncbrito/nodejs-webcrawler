@@ -8,8 +8,8 @@ let msg = '';
 const gerarTituloDaMensagem = (nomeDoProduto) =>    
     msg += `<strong>${nomeDoProduto} </strong><br>`;
 
-const gerarCorpoDaMensagem = (descricaoProduto) =>
-    msg += `<br>${descricaoProduto}`;
+const gerarCorpoDaMensagem = (descricaoProduto, precoProduto) =>
+    msg += `<br>${descricaoProduto} - ${precoProduto}`;
 
 const gerarLinkDaMensagem = (linkDoProduto) =>
     msg += `<br><br><strong><a href="${linkDoProduto}" alt="${linkDoProduto}">LINK PARA O PRODUTO</a></strong>`
@@ -57,15 +57,7 @@ module.exports = {
         gerarTituloDaMensagem(produto.nome);
 
         if (quedaDePreco.precoMenor) {
-            gerarCorpoDaMensagem(produto.valores.precoDescricao);
-        }
-
-        if (quedaDePreco.boletoMenor) {
-            gerarCorpoDaMensagem(produto.valores.boletoDescricao);
-        }
-
-        if (quedaDePreco.cartaoLojaMenor) {
-            gerarCorpoDaMensagem(produto.valores.cartaoLojaDescricao);
+            gerarCorpoDaMensagem(produto.nomeLoja, produto.preco);
         }
 
         gerarLinkDaMensagem(produto.link);

@@ -1,10 +1,6 @@
 {
     "to": "leandroncbrito@gmail.com",
     "minutes": 10,
-    "price": 14000,
-    "pages": [
-        "http://www.americanas.com.br/produto/131132644/game-tom-clancys-ghost-recon-wildlands-limited-edition-ps4",
-        "http://www.shoptime.com.br/produto/131132644",
-        "https://www.submarino.com.br/produto/131132644/game-tom-clancys-ghost-recon-wildlands-limited-edition-ps4"    
-    ]
+    "price": 15000,
+    "page": "https://www.google.com.br/shopping/product/5568861739687385121?biw=1920&bih=963&output=search&q=ghost+recon+wildlands+ps4&oq=ghost+recon+wildlands+ps4&prds=hsec:online&sa=X&ved=0ahUKEwiz8rqd6-bTAhVFkpAKHblZAUMQ2SsIEw"    
 }
