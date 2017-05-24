@@ -21,9 +21,10 @@ function iniciar(enviaremail) {
 
     console.log("Iniciando crawler...");
 
-    setInterval(function () {        
+    setInterval(function () {
         http.get(process.env.HOST, function() { 
-          console.log("Ping");
+          var data = new Date();
+          console.log("Ping " + new Date().toLocaleString());
         });
     }, ping);
     
