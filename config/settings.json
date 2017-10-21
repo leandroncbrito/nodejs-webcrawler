@@ -1,16 +1,30 @@
 {
-    "to": "leandroncbrito@gmail.com",
-    "minutes": 15,
-    "price": 17000,
-    "pages": [
-        "https://www.americanas.com.br/produto/132397661/game-destiny-2-camiseta-dlc-edicao-de-pre-venda-ps4?pfm_carac=destiny%202&pfm_index=0&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-        "https://www.americanas.com.br/produto/132474064/game-destiny-2-edicao-de-day-one-ps4?pfm_carac=destiny%202&pfm_index=7&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-        "https://www.submarino.com.br/produto/132397661/game-destiny-2-camiseta-dlc-edicao-de-pre-venda-ps4?pfm_carac=Jogos%20Playstation%204&pfm_index=27&pfm_page=category&pfm_pos=grid&pfm_type=vit_product_grid",
-        "https://www.submarino.com.br/produto/132474064?pfm_carac=destiny%202&pfm_index=7&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-        "https://www.shoptime.com.br/produto/132397661?pfm_carac=destiny%202&pfm_index=0&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-        "https://www.shoptime.com.br/produto/132474064/game-destiny-2-edicao-de-day-one-ps4?pfm_carac=destiny%202&pfm_index=7&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-        "https://www.americanas.com.br/produto/132479789/game-marvel-vs-capcom-infinite-ps4?WT.srch=1&epar=bp_pl_00_go_pla_rlsa_novos_geral_1p&gclid=CjwKCAjwjJjOBRBVEiwAfvnvBOqYY6jslmiH9YSs6fZVap5jJ6VbiiibMfRZpnA96wrwdCGRG4XbIRoCE3AQAvD_BwE&opn=YSMESP&sellerId=0",
-        "https://www.submarino.com.br/produto/132479789/game-marvel-vs-capcom-infinite-ps4?WT.srch=1&epar=bp_pl_00_go_pla_gm_geral_1p&epar=bp_pl_00_go_pla_gm_geral_1p&gclid=CjwKCAjwjJjOBRBVEiwAfvnvBHvzxWsZBxv9CY9MkrEKrQjNEMr71IQYn41GaVkUAJYcMwhYTwSu9hoCfxsQAvD_BwE&opn=XMLGOOGLE&sellerId=00776574000660",
-        "https://www.shoptime.com.br/produto/132479789/game-marvel-vs-capcom-infinite-ps4?WT.srch=1&epar=bp_pl_00_go_pla_gm_geral_1p&gclid=CjwKCAjwjJjOBRBVEiwAfvnvBGoPL751rhWdoON8aaMGV6GNijZKmqzfLdQflKii1gGgDc75MAX_qxoCLaoQAvD_BwE&opn=GOOGLEXML&sellerId=00776574000660"
+    "to": "leandroncbrito@gmail.com; luluzinnhavaz@gmail.com",
+    "minutes": 15,    
+    "products": [
+        {
+            "url": "https://www.submarino.com.br/produto/111240509/fogao-de-piso-electrolux-5-bocas-celebrate-76srx-inox-com-forno-autolimpante?epar=b2wafiliados&franq=AFL-03-41440&opn=AFLNOVOSUB",
+            "price": 140000
+        },
+        {
+            "url": "https://www.americanas.com.br/produto/111240509/fogao-de-piso-electrolux-5-bocas-celebrate-76srx-inox-com-forno-autolimpante?WT.srch=1&epar=bp_pl_00_go_pla_ed_rlsa_novos_gmv&epar=bp_pl_00_go_pla_ed_rlsa_novos_gmv&gclid=CjwKCAjw4KvPBRBeEiwAIqCB-dMBS1ZquXzp3p4_JoWy3Y9tzsnF5P7lDoJ07fuuPUGESu7hoKZ1IRoCuRMQAvD_BwE&opn=YSMESP&sellerId=13986197000121",
+            "price": 140000
+        },
+        {
+            "url": "https://www.shoptime.com.br/produto/111240509/fogao-de-piso-electrolux-5-bocas-celebrate-76srx-inox-com-forno-autolimpante?WT.srch=1&epar=bp_pl_00_go_ed_refrigerador_todas_geral_gmv&epar=bp_pl_00_go_ed_refrigerador_todas_geral_gmv&gclid=CjwKCAjw4KvPBRBeEiwAIqCB-dgdYgtRhzm26RVzEekr_wzDHsnUhfIh_McbKhFf7SRe2LAGwei8WhoCjxMQAvD_BwE&opn=GOOGLEXML&sellerId=13986197000121",
+            "price": 140000
+        },
+        {
+            "url": "https://www.submarino.com.br/produto/132614881/game-the-evil-within-2-ps4?WT.srch=1&epar=bp_pl_00_go_g35065&gclid=CjwKCAjw4KvPBRBeEiwAIqCB-UBg1-wqjA-YjcpEbCCy70MgZxb5fIDcCZ1ADBrXYwta0s_Z_XIBuRoCc30QAvD_BwE&opn=XMLGOOGLE&sellerId=00776574000660",
+            "price": 15000
+        },
+        {
+            "url": "https://www.americanas.com.br/produto/132614881/game-the-evil-within-2-ps4?WT.srch=1&epar=bp_pl_00_go_pla_rlsa_novos_geral_1p&gclid=CjwKCAjw4KvPBRBeEiwAIqCB-fla_m7VKzsiJKkk7Nh6DagV-8yCDplc9IKX48CofdRI2929JEt75xoCFn4QAvD_BwE&opn=YSMESP&sellerId=0",
+            "price": 15000
+        },
+        {
+            "url": "https://www.shoptime.com.br/produto/132614881/game-the-evil-within-2-ps4?pfm_carac=the%20evil%20within%202&pfm_index=0&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
+            "price": 15000
+        }                        
     ]
 }

@@ -31,7 +31,7 @@ function iniciar(enviaremail) {
     setInterval(function () {
          crawler.buscarDados(enviaremail)
     }, intervalo);
-    
+
 }
 
 iniciar(true);
