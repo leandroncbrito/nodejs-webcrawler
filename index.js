@@ -8,7 +8,7 @@ const config = require('./config/settings.json');
 dotenv.load();
 
 let intervalo = config.minutes * 60 * 1000;
-let ping = 5 * 60 * 1000;
+let ping = 10 * 60 * 1000;
 
 http.createServer(function (req, res) {
   
