@@ -3,29 +3,29 @@
     "minutes": 20,
     "products": [
         {
-            "url": "https://www.submarino.com.br/produto/132639332/iphone-8-cinza-espacial-64gb-tela-4.7-ios-11-4g-wi-fi-camera-12mp-apple",
+            "url": "https://www.submarino.com.br/produto/133776099/iphone-8-64gb-cinza-espacial-tela-4-7-ios-4g-camera-12mp-apple?pfm_carac=iphone%208&pfm_index=1&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
             "price": 268000
         },
         {
-            "url": "https://www.americanas.com.br/produto/132639332/iphone-8-cinza-espacial-64gb-tela-4.7-ios-11-4g-wi-fi-camera-12mp-apple",
+            "url": "https://www.americanas.com.br/produto/133776099/iphone-8-64gb-cinza-espacial-tela-4-7-ios-4g-camera-12mp-apple?pfm_carac=iphone%208&pfm_index=2&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
             "price": 268000
         },
         {
-            "url": "https://www.shoptime.com.br/produto/132639332/iphone-8-cinza-espacial-64gb-tela-4.7-ios-11-4g-wi-fi-camera-12mp-apple",
+            "url": "https://www.shoptime.com.br/produto/133776099?pfm_carac=iphone%208&pfm_index=6&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
             "price": 268000
         },
         
         {
-            "url": "https://www.submarino.com.br/produto/133326709/game-ni-no-kuni-ii-revenant-kingdom-day-1-ed-ps4",
-            "price": 13000
+            "url": "https://www.submarino.com.br/produto/133806745?pfm_carac=read%20dead%20redemption%202&pfm_index=0&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
+            "price": 17000
         },        
         {
-            "url": "https://www.americanas.com.br/produto/133326709/game-ni-no-kuni-ii-revenant-kingdom-day-1-ed-ps4",
-            "price": 13000
+            "url": "https://www.americanas.com.br/produto/133806745/game-red-dead-redemption-2-ps4?pfm_carac=Red%20Dead%20Redemption%202&pfm_index=1&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
+            "price": 17000
         },
         {
-            "url": "https://www.shoptime.com.br/produto/133326709/game-ni-no-kuni-ii-revenant-kingdom-day-1-ed-ps4",
-            "price": 13000
+            "url": "https://www.shoptime.com.br/produto/46534932/jogo-red-dead-redemption-2-midia-fisica-original-ps4?pfm_carac=Red%20Dead%20Redemption%202&pfm_index=0&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
+            "price": 17000
         }        
     ]
 }
