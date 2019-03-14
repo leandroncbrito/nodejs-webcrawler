@@ -1,31 +1,10 @@
 {
     "to": "leandroncbrito@gmail.com",
     "minutes": 10,
-    "products": [
+    "products": [              
         {
-            "url": "https://www.submarino.com.br/produto/133776099/iphone-8-64gb-cinza-espacial-tela-4-7-ios-4g-camera-12mp-apple?pfm_carac=iphone%208&pfm_index=1&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-            "price": 268000
-        },
-        {
-            "url": "https://www.americanas.com.br/produto/133776099/iphone-8-64gb-cinza-espacial-tela-4-7-ios-4g-camera-12mp-apple?pfm_carac=iphone%208&pfm_index=2&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-            "price": 268000
-        },
-        {
-            "url": "https://www.shoptime.com.br/produto/133776099?pfm_carac=iphone%208&pfm_index=6&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-            "price": 268000
-        },
-        
-        {
-            "url": "https://www.submarino.com.br/produto/133806745?pfm_carac=read%20dead%20redemption%202&pfm_index=0&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
+            "url": "https://www.submarino.com.br/produto/134195747/game-days-gone-ps4?DCSext.recom=RR_category_page.history-RecentHistoricalItems&nm_origem=rec_category_page.history-RecentHistoricalItems&nm_ranking_rec=1&pfm_carac=%C3%9Altimos%20produtos%20vistos&pfm_index=0&pfm_page=seller&pfm_pos=category_page.history&pfm_type=vit_recommendation",
             "price": 17000
-        },        
-        {
-            "url": "https://www.americanas.com.br/produto/133806745/game-red-dead-redemption-2-ps4?pfm_carac=Red%20Dead%20Redemption%202&pfm_index=1&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-            "price": 17000
-        },
-        {
-            "url": "https://www.shoptime.com.br/produto/46534932/jogo-red-dead-redemption-2-midia-fisica-original-ps4?pfm_carac=Red%20Dead%20Redemption%202&pfm_index=0&pfm_page=search&pfm_pos=grid&pfm_type=search_page%20",
-            "price": 17000
-        }        
+        },                   
     ]
 }
