@@ -18,6 +18,8 @@ const ProcessarProdutoEnviarEmail = (produto, enviaremail) => {
     quedaDePreco.precoMenor = VerificarPreco(produto.valores.preco, produto.precoBase);
     quedaDePreco.boletoMenor = VerificarPreco(produto.valores.boleto, produto.precoBase);
     quedaDePreco.cartaoLojaMenor = VerificarPreco(produto.valores.cartaoLoja, produto.precoBase);
+    
+    console.log(quedaDePreco);
 
     if (quedaDePreco.precoMenor || quedaDePreco.boletoMenor || quedaDePreco.cartaoLojaMenor) {
 
